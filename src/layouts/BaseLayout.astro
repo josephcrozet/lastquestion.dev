@@ -1,0 +1,26 @@
+---
+import Nav from "../components/Nav.astro";
+import "../styles/global.css";
+const { title } = Astro.props;
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <header>
+      <h1>{title}</h1>
+      <Nav />
+    </header>
+    <main>
+      <slot />
+    </main>
+    <footer>
+      <p>© Joseph Crozet</p>
+    </footer>
+  </body>
+</html>
