@@ -1,0 +1,41 @@
+---
+import type { GetStaticPaths } from "astro";
+import { getCollection } from "astro:content";
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+export const getStaticPaths = (async ({ paginate }) => {
+  const posts = (await getCollection("posts"))
+    .filter((post) => !post.data.draft)
+    .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+
+  return paginate(posts, { pageSize: 10 });
+}) satisfies GetStaticPaths;
+
+const { page } = Astro.props;
+---
+
+<BaseLayout title="Last Question" description="Home Page">
+  <ul>
+    {
+      page.data.map((post) => (
+        <li>
+          <a href={`/posts/${post.id}/`}>{post.data.title}</a>
+          <p>{post.data.pubDate.toLocaleDateString()}</p>
+          <p>{post.data.description}</p>
+        </li>
+      ))
+    }
+  </ul>
+
+  <nav>
+    {page.url.prev && <a href={page.url.prev}>← prev</a>}
+    {
+      page.total > page.size && (
+        <span>
+          page {page.currentPage} of {page.lastPage}
+        </span>
+      )
+    }
+    {page.url.next && <a href={page.url.next}>next →</a>}
+  </nav>
+</BaseLayout>
