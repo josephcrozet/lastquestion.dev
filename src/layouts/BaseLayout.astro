@@ -5,9 +5,10 @@ import "../styles/global.css";
 interface Props {
   title: string;
   description?: string;
+  type?: string;
 }
 
-const { title, description } = Astro.props;
+const { title, description, type = "website" } = Astro.props;
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 ---
 
@@ -20,6 +21,10 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     <link rel="canonical" href={canonicalURL} />
     <meta property="og:title" content={title} />
     {description && <meta property="og:description" content={description} />}
+    <meta property="og:type" content={type} />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:site_name" content="Last Question" />
+    <meta name="twitter:card" content="summary" />
     <meta name="generator" content={Astro.generator} />
   </head>
   <body>
