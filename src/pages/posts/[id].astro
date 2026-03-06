@@ -29,6 +29,9 @@ const { Content } = await render(post);
   <article class="prose">
     <Content />
   </article>
+  <div>
+    {post.data.tags.map((tag) => <span>{tag}</span>)}
+  </div>
   <nav>
     {prev && <a href={`/posts/${prev.id}`}>← prev</a>}
     {next && <a href={`/posts/${next.id}`}>next →</a>}
