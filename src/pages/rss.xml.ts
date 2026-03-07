@@ -6,6 +6,7 @@ export async function GET(context: APIContext) {
   const posts = (await getCollection("posts"))
     .filter((post) => !post.data.draft)
     .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+
   return rss({
     title: "Last Question",
     description:

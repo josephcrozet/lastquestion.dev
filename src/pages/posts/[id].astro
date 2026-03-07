@@ -30,7 +30,7 @@ const { Content } = await render(post);
     <Content />
   </article>
   <div>
-    {post.data.tags.map((tag) => <span>{tag}</span>)}
+    {post.data.tags.map((tag) => <a href={`/tags/${tag}`}>{tag}</a>)}
   </div>
   <nav>
     {prev && <a href={`/posts/${prev.id}`}>← prev</a>}
