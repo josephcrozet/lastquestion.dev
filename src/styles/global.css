@@ -1,2 +1,52 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
+
+@theme {
+  --font-body: "iA Writer Quattro", sans-serif;
+  --font-heading: "Space Grotesk", sans-serif;
+  --font-mono: "Fira Code", monospace;
+}
+
+@font-face {
+  font-family: "iA Writer Quattro";
+  src: url("/fonts/ia-writer-quattro/regular.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "iA Writer Quattro";
+  src: url("/fonts/ia-writer-quattro/bold.woff2") format("woff2");
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "iA Writer Quattro";
+  src: url("/fonts/ia-writer-quattro/italic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "iA Writer Quattro";
+  src: url("/fonts/ia-writer-quattro/bold-italic.woff2") format("woff2");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Space Grotesk";
+  src: url("/fonts/space-grotesk/variable.woff2") format("woff2");
+  font-weight: 300 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Fira Code";
+  src: url("/fonts/fira-code/variable.woff2") format("woff2");
+  font-weight: 300 700;
+  font-display: swap;
+}

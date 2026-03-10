@@ -28,15 +28,15 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     <meta name="twitter:card" content="summary" />
     <meta name="generator" content={Astro.generator} />
   </head>
-  <body>
-    <header>
+  <body class="font-body">
+    <header class="font-heading">
       <h1>{title}</h1>
       <Nav />
     </header>
     <main>
       <slot />
     </main>
-    <footer>
+    <footer class="font-heading">
       <p>
         © Joseph Crozet ·
         <a href="https://github.com/josephcrozet/lastquestion.dev">Source</a>
