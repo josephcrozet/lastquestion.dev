@@ -10,7 +10,8 @@
     "astro": "astro",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "lint": "eslint src"
+    "lint": "eslint src",
+    "ci": "bun run check && bun run format:check && bun run lint && bun run build"
   },
   "dependencies": {
     "@astrojs/mdx": "^5.0.0",
