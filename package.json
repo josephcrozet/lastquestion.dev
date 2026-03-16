@@ -14,6 +14,7 @@
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "lint": "eslint src",
+    "lint:fix": "eslint src --fix",
     "ci": "bun run check && bun run format:check && bun run lint && bun run build"
   },
   "dependencies": {
