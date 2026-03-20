@@ -23,10 +23,9 @@
     "@astrojs/rss": "^4.0.17",
     "@astrojs/sitemap": "^3.7.1",
     "@tailwindcss/typography": "^0.5.19",
-    "@tailwindcss/vite": "^4.2.1",
+    "@tailwindcss/vite": "^4.2.2",
     "astro": "^6.0.4",
-    "tailwindcss": "^4.2.1",
-    "vite": "^7.3.1"
+    "tailwindcss": "^4.2.2"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^7.7.3",
