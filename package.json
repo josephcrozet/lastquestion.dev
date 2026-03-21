@@ -19,18 +19,18 @@
     "ci": "bun run check && bun run format:check && bun run lint && bun run build"
   },
   "dependencies": {
-    "@astrojs/mdx": "^5.0.0",
+    "@astrojs/mdx": "^5.0.2",
     "@astrojs/rss": "^4.0.17",
     "@astrojs/sitemap": "^3.7.1",
     "@tailwindcss/typography": "^0.5.19",
     "@tailwindcss/vite": "^4.2.2",
-    "astro": "^6.0.4",
+    "astro": "^6.0.8",
     "tailwindcss": "^4.2.2"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^7.7.3",
-    "@astrojs/check": "^0.9.7",
-    "eslint": "^10.0.3",
+    "@astrojs/check": "^0.9.8",
+    "eslint": "^10.1.0",
     "eslint-plugin-astro": "^1.6.0",
     "prettier": "^3.8.1",
     "prettier-plugin-astro": "^0.14.1",
