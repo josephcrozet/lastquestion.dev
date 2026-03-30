@@ -13,7 +13,7 @@ export async function GET(context: APIContext) {
     title: "Last Question",
     description:
       "Personal blog about AI systems, tooling, and the space between vibe coding and AI engineering.",
-    site: context.site!,
+    site: context.site ?? new URL("https://lastquestion.dev"),
     items: posts.map((post) => ({
       title: post.data.title,
       description: post.data.description,
