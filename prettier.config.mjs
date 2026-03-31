@@ -11,6 +11,12 @@ export default {
       },
     },
     {
+      files: "*.css",
+      options: {
+        singleQuote: false
+      }
+    },
+    {
       files: "*.jsonc",
       options: {
         trailingComma: "none",
