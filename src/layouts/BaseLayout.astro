@@ -1,6 +1,6 @@
 ---
-import Nav from "@components/Nav.astro";
-import "@styles/global.css";
+import Nav from '@components/Nav.astro';
+import '@styles/global.css';
 
 interface Props {
   title: string;
@@ -8,7 +8,7 @@ interface Props {
   type?: string;
 }
 
-const { title, description, type = "website" } = Astro.props;
+const { title, description, type = 'website' } = Astro.props;
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 ---
 
