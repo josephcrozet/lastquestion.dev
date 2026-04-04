@@ -16,7 +16,8 @@
     "lint": "eslint",
     "lint:fix": "eslint --fix",
     "fix": "bun run format && bun run lint:fix",
-    "ci": "bun run check && bun run format:check && bun run lint && bun run build"
+    "ci": "bun run check && bun run format:check && bun run lint && bun run build",
+    "postinstall": "simple-git-hooks"
   },
   "dependencies": {
     "@astrojs/mdx": "^5.0.3",
@@ -35,6 +36,10 @@
     "prettier": "^3.8.1",
     "prettier-plugin-astro": "^0.14.1",
     "prettier-plugin-tailwindcss": "^0.7.2",
+    "simple-git-hooks": "^2.13.1",
     "typescript": "^6.0.2"
+  },
+  "simple-git-hooks": {
+    "pre-push": "bun run ci"
   }
 }
