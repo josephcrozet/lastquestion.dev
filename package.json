@@ -17,6 +17,7 @@
     "lint:fix": "eslint --fix",
     "fix": "bun run format && bun run lint:fix",
     "ci": "bun run check && bun run format:check && bun run lint && bun run build",
+    "preinstall": "npx only-allow bun",
     "postinstall": "simple-git-hooks"
   },
   "dependencies": {
