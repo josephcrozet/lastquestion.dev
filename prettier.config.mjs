@@ -11,7 +11,7 @@ export default {
       },
     },
     {
-      files: '*.css',
+      files: ['*.css', '*.yaml', '*.yml'],
       options: {
         singleQuote: false,
       },
