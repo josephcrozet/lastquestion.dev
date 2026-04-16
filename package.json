@@ -16,6 +16,7 @@
     "lint": "eslint",
     "lint:fix": "eslint --fix",
     "knip": "knip",
+    "biome": "biome check",
     "fix": "bun run format && bun run lint:fix",
     "ci": "bun run check && bun run format:check && bun run lint && bun run knip && bun run build",
     "preinstall": "npx only-allow bun",
