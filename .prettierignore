@@ -1,0 +1,7 @@
+# Formatted by Biome
+**/*.js
+**/*.ts
+**/*.mjs
+**/*.css
+**/*.json
+**/*.jsonc
