@@ -28,22 +28,22 @@
     "@astrojs/sitemap": "^3.7.2",
     "@tailwindcss/typography": "^0.5.19",
     "@tailwindcss/vite": "^4.2.2",
-    "astro": "^6.1.6",
+    "astro": "^6.1.7",
     "tailwindcss": "^4.2.2"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^8.2.0",
     "@astrojs/check": "^0.9.8",
     "@biomejs/biome": "^2.4.12",
-    "eslint": "^10.2.0",
+    "eslint": "^10.2.1",
     "eslint-plugin-astro": "^1.7.0",
     "knip": "^6.4.1",
     "only-allow": "^1.2.2",
-    "prettier": "^3.8.2",
+    "prettier": "^3.8.3",
     "prettier-plugin-astro": "^0.14.1",
     "prettier-plugin-tailwindcss": "^0.7.2",
     "simple-git-hooks": "^2.13.1",
-    "typescript": "^6.0.2"
+    "typescript": "^6.0.3"
   },
   "simple-git-hooks": {
     "pre-push": "bun run ci"
