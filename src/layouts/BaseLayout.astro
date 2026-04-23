@@ -3,9 +3,9 @@ import Nav from '@components/Nav.astro';
 import '@styles/global.css';
 
 interface Props {
-  title: string;
-  description?: string;
-  type?: string;
+	title: string;
+	description?: string;
+	type?: string;
 }
 
 const { title, description, type = 'website' } = Astro.props;
@@ -13,34 +13,34 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 ---
 
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{title}</title>
-    {description && <meta name="description" content={description} />}
-    <link rel="canonical" href={canonicalURL} />
-    <meta property="og:title" content={title} />
-    {description && <meta property="og:description" content={description} />}
-    <meta property="og:type" content={type} />
-    <meta property="og:url" content={canonicalURL} />
-    <meta property="og:site_name" content="Last Question" />
-    <meta name="twitter:card" content="summary" />
-    <meta name="generator" content={Astro.generator} />
-  </head>
-  <body class="font-body">
-    <header class="font-heading">
-      <h1>{title}</h1>
-      <Nav />
-    </header>
-    <main>
-      <slot />
-    </main>
-    <footer class="font-heading">
-      <p>
-        © Joseph Crozet ·
-        <a href="https://github.com/josephcrozet/lastquestion.dev">Source</a>
-      </p>
-    </footer>
-  </body>
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>{title}</title>
+		{description && <meta name="description" content={description} />}
+		<link rel="canonical" href={canonicalURL} />
+		<meta property="og:title" content={title} />
+		{description && <meta property="og:description" content={description} />}
+		<meta property="og:type" content={type} />
+		<meta property="og:url" content={canonicalURL} />
+		<meta property="og:site_name" content="Last Question" />
+		<meta name="twitter:card" content="summary" />
+		<meta name="generator" content={Astro.generator} />
+	</head>
+	<body class="font-body">
+		<header class="font-heading">
+			<h1>{title}</h1>
+			<Nav />
+		</header>
+		<main>
+			<slot />
+		</main>
+		<footer class="font-heading">
+			<p>
+				© Joseph Crozet ·
+				<a href="https://github.com/josephcrozet/lastquestion.dev">Source</a>
+			</p>
+		</footer>
+	</body>
 </html>

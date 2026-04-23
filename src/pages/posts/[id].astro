@@ -4,18 +4,18 @@ import { getCollection, render } from 'astro:content';
 import BaseLayout from '@layouts/BaseLayout.astro';
 
 export async function getStaticPaths() {
-  const posts = (await getCollection('posts'))
-    .filter((post) => !post.data.draft)
-    .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+	const posts = (await getCollection('posts'))
+		.filter((post) => !post.data.draft)
+		.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
-  return posts.map((post, i) => ({
-    params: { id: post.id },
-    props: {
-      post,
-      prev: posts[i + 1] ?? null,
-      next: posts[i - 1] ?? null,
-    },
-  }));
+	return posts.map((post, i) => ({
+		params: { id: post.id },
+		props: {
+			post,
+			prev: posts[i + 1] ?? null,
+			next: posts[i - 1] ?? null,
+		},
+	}));
 }
 
 const { post, prev, next } = Astro.props;
@@ -23,18 +23,18 @@ const { Content } = await render(post);
 ---
 
 <BaseLayout
-  title={post.data.title}
-  description={post.data.description}
-  type="article"
+	title={post.data.title}
+	description={post.data.description}
+	type="article"
 >
-  <article class="prose">
-    <Content />
-  </article>
-  <div>
-    {post.data.tags.map((tag) => <a href={`/tags/${tag}`}>{tag}</a>)}
-  </div>
-  <nav>
-    {prev && <a href={`/posts/${prev.id}`}>← prev</a>}
-    {next && <a href={`/posts/${next.id}`}>next →</a>}
-  </nav>
+	<article class="prose">
+		<Content />
+	</article>
+	<div>
+		{post.data.tags.map((tag) => <a href={`/tags/${tag}`}>{tag}</a>)}
+	</div>
+	<nav>
+		{prev && <a href={`/posts/${prev.id}`}>← prev</a>}
+		{next && <a href={`/posts/${next.id}`}>next →</a>}
+	</nav>
 </BaseLayout>
