@@ -1,25 +1,14 @@
 /** @type {import('prettier').Config & import('prettier-plugin-tailwindcss').PluginOptions} */
 export default {
-	tailwindStylesheet: './src/styles/global.css',
 	plugins: ['prettier-plugin-astro', 'prettier-plugin-tailwindcss'],
-	singleQuote: true,
+	tailwindStylesheet: './src/styles/global.css',
 	overrides: [
 		{
 			files: '*.astro',
 			options: {
 				parser: 'astro',
-			},
-		},
-		{
-			files: ['*.css', '*.yaml', '*.yml'],
-			options: {
-				singleQuote: false,
-			},
-		},
-		{
-			files: '*.jsonc',
-			options: {
-				trailingComma: 'none',
+				singleQuote: true,
+				useTabs: true,
 			},
 		},
 	],
