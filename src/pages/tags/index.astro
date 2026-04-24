@@ -1,6 +1,5 @@
 ---
 import { getCollection } from 'astro:content';
-
 import BaseLayout from '@/layouts/BaseLayout.astro';
 
 const posts = (await getCollection('posts')).filter((post) => !post.data.draft);

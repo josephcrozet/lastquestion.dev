@@ -1,8 +1,6 @@
 ---
 import type { GetStaticPaths } from 'astro';
-
 import { getCollection } from 'astro:content';
-
 import BaseLayout from '@/layouts/BaseLayout.astro';
 
 export const getStaticPaths = (async ({ paginate }) => {
