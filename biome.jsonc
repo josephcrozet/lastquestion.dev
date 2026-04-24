@@ -8,7 +8,21 @@
     "enabled": false
   },
   "assist": {
-    "enabled": false
+    "actions": {
+      "source": {
+        "organizeImports": {
+          "level": "on",
+          "options": {
+            "groups": [
+              { "source": "astro" },
+              { "source": "astro:*" },
+              { "source": "astro/**" },
+              { "source": "@astrojs/**" }
+            ]
+          }
+        }
+      }
+    }
   },
   "css": {
     "parser": {
