@@ -1,14 +1,14 @@
-import antfu from '@antfu/eslint-config';
+import { defineConfig, globalIgnores } from 'eslint/config';
+import eslintPluginAstro from 'eslint-plugin-astro';
 
-export default antfu(
+export default defineConfig([
+	globalIgnores(['**/*.js', '**/*.cjs', '**/*.mjs', '.astro/', 'dist/']),
+	...eslintPluginAstro.configs.recommended,
 	{
-		astro: true,
-		markdown: false,
-		stylistic: false,
-	},
-	{
+		files: ['**/*.astro'],
 		rules: {
-			'perfectionist/sort-imports': 'off',
+			'no-unused-vars': 'warn',
+			'prefer-const': 'warn',
 		},
 	},
-);
+]);

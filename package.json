@@ -13,8 +13,8 @@
     "astro": "astro",
     "format": "biome check --linter-enabled=false . && prettier --check --log-level warn .",
     "format:fix": "biome check --write --linter-enabled=false . && prettier --write --log-level warn .",
-    "lint": "eslint --max-warnings 0 .",
-    "lint:fix": "eslint --fix .",
+    "lint": "biome lint --error-on-warnings . && eslint --max-warnings 0 .",
+    "lint:fix": "biome lint --write . && eslint --fix .",
     "knip": "knip",
     "check": "astro check --noSync --silent",
     "biome": "biome check",
@@ -33,9 +33,9 @@
     "tailwindcss": "^4.2.4"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^8.2.0",
     "@astrojs/check": "^0.9.8",
     "@biomejs/biome": "^2.4.12",
+    "@typescript-eslint/parser": "^8.59.0",
     "eslint": "^10.2.1",
     "eslint-plugin-astro": "^1.7.0",
     "knip": "^6.6.0",
@@ -48,5 +48,10 @@
   },
   "simple-git-hooks": {
     "pre-push": "bun run ci"
+  },
+  "knip": {
+    "ignoreDependencies": [
+      "@typescript-eslint/parser"
+    ]
   }
 }

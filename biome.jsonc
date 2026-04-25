@@ -5,7 +5,14 @@
     "ignoreUnknown": true
   },
   "linter": {
-    "enabled": false
+    "rules": {
+      "suspicious": {
+        "noVar": {
+          "level": "warn",
+          "fix": "safe"
+        }
+      }
+    }
   },
   "assist": {
     "actions": {
@@ -42,7 +49,15 @@
   "overrides": [
     {
       "includes": ["**/*.astro"],
-      "formatter": { "enabled": false }
+      "formatter": { "enabled": false },
+      "linter": {
+        "rules": {
+          "correctness": {
+            "noUnusedVariables": "off",
+            "noUnusedImports": "off"
+          }
+        }
+      }
     }
   ]
 }
