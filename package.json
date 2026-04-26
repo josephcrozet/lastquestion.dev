@@ -46,6 +46,9 @@
     "simple-git-hooks": "^2.13.1",
     "typescript": "^6.0.3"
   },
+  "overrides": {
+    "vite": "7.3.2"
+  },
   "simple-git-hooks": {
     "pre-push": "bun run ci"
   },
