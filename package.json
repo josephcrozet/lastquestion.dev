@@ -9,7 +9,7 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "start": "bun run build && bun run preview",
+    "start": "bun run build && bun run preview --open",
     "astro": "astro",
     "format": "biome check --linter-enabled=false . && prettier --check --log-level warn .",
     "format:fix": "biome format --write . && prettier --write --log-level warn .",
