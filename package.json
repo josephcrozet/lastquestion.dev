@@ -17,7 +17,6 @@
     "lint:fix": "biome check --write --formatter-enabled=false . && eslint --fix .",
     "knip": "knip",
     "check": "astro check --noSync --silent",
-    "biome": "biome check",
     "ci": "astro sync --silent && bun run --parallel format lint knip check build",
     "fix": "bun run --sequential lint:fix format:fix",
     "preinstall": "npx only-allow bun",
