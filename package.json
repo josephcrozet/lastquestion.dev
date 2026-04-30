@@ -15,8 +15,9 @@
     "lint": "biome lint --error-on-warnings . && eslint --max-warnings 0 .",
     "lint:fix": "biome check --write --formatter-enabled=false . && eslint --fix .",
     "knip": "knip",
+    "sync": "astro sync --silent",
     "check": "astro check --noSync --silent",
-    "ci": "astro sync --silent && bun run --parallel format lint knip check build",
+    "ci": "bun run sync && bun run --parallel format lint knip check build",
     "fix": "bun run --sequential lint:fix format:fix"
   },
   "simple-git-hooks": {
