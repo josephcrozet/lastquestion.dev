@@ -16,7 +16,7 @@
     "lint:fix": "biome check --write --formatter-enabled=false . && eslint --fix .",
     "knip": "knip",
     "sync": "astro sync --silent",
-    "check": "astro check --noSync --silent",
+    "check": "tsgo && astro check --noSync --silent --tsconfig tsconfig.astro.json",
     "ci": "bun run sync && bun run --parallel format lint knip check build",
     "fix": "bun run --sequential lint:fix format:fix"
   },
@@ -41,6 +41,7 @@
     "@astrojs/check": "^0.9.8",
     "@biomejs/biome": "^2.4.13",
     "@typescript-eslint/parser": "^8.59.0",
+    "@typescript/native-preview": "^7.0.0-dev.20260421.2",
     "eslint": "^10.2.1",
     "eslint-plugin-astro": "^1.7.0",
     "knip": "^6.7.0",
