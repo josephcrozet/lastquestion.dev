@@ -16,8 +16,11 @@
     "lint:fix": "biome check --write --formatter-enabled=false . && eslint --fix .",
     "knip": "knip",
     "sync": "astro sync --silent",
-    "check": "tsgo && astro check --noSync --silent --tsconfig tsconfig.astro.json",
-    "ci": "bun run sync && bun run --parallel format lint knip check build",
+    "check": "astro check --noSync --silent",
+    "check:astro": "astro check --noSync --silent --tsconfig tsconfig.astro.json",
+    "check:ts": "tsgo",
+    "check:ci": "bun run --parallel check:ts check:astro",
+    "ci": "bun run sync && bun run --parallel format lint knip check:ci build",
     "fix": "bun run --sequential lint:fix format:fix"
   },
   "simple-git-hooks": {
