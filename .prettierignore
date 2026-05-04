@@ -1,6 +1,6 @@
 # Formatted by Biome
 **/*.js
 **/*.ts
-**/*.css
 **/*.json
 **/*.jsonc
+**/*.css
