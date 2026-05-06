@@ -12,6 +12,12 @@
   "linter": {
     "rules": {
       "suspicious": {
+        "noConsole": {
+          "level": "warn",
+          "options": {
+            "allow": ["error", "warn", "info", "debug"]
+          }
+        },
         "noVar": {
           "level": "warn",
           "fix": "safe"
