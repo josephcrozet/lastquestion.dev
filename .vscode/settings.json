@@ -1,0 +1,46 @@
+{
+  "[astro]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": "never"
+  },
+  "eslint.validate": ["astro"],
+  "typescript.native-preview.tsdk": "${workspaceFolder}/node_modules/@typescript/native-preview",
+  "errorLens.statusBarColorsEnabled": false,
+  "errorLens.statusBarIconsUseBackground": true,
+  "files.exclude": {
+    "**/.git": false,
+    "**/.svn": false,
+    "**/.hg": false,
+    "**/flutter/ephemeral": false,
+    "**/Flutter/ephemeral": false,
+    "**/.symlinks": false,
+    "**/.plugin_symlinks": false,
+    "**/CVS": false,
+    "**/.ruby-lsp": false,
+    "**/node_modules": false,
+    "**/__pycache__": false,
+    "**/.*": false
+  },
+  "peacock.color": "#6272a4",
+  "workbench.colorCustomizations": {
+    "activityBar.activeBackground": "#828fb7",
+    "activityBar.background": "#828fb7",
+    "activityBar.foreground": "#15202b",
+    "activityBar.inactiveForeground": "#15202b99",
+    "activityBarBadge.background": "#e8d7db",
+    "activityBarBadge.foreground": "#15202b",
+    "commandCenter.border": "#e7e7e799",
+    "sash.hoverBorder": "#828fb7",
+    "statusBar.background": "#6272a4",
+    "statusBar.foreground": "#e7e7e7",
+    "statusBarItem.hoverBackground": "#828fb7",
+    "statusBarItem.remoteBackground": "#6272a4",
+    "statusBarItem.remoteForeground": "#e7e7e7",
+    "titleBar.activeBackground": "#6272a4",
+    "titleBar.activeForeground": "#e7e7e7",
+    "titleBar.inactiveBackground": "#6272a499",
+    "titleBar.inactiveForeground": "#e7e7e799"
+  }
+}
