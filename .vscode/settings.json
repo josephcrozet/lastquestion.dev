@@ -1,10 +1,27 @@
 {
+  // Formatting
   "[astro]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+  "[javascript][typescript][json][jsonc][css]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "editor.insertSpaces": true,
+  "editor.tabSize": 2,
+  "editor.rulers": [100],
+  "prettier.documentSelectors": ["**/*.astro"],
+
+  // Linting
+  "eslint.validate": ["astro"],
+  "css.lint.unknownAtRules": "ignore",
   "editor.codeActionsOnSave": {
+    "source.fixAll": "explicit",
     "source.organizeImports": "never"
   },
-  "eslint.validate": ["astro"],
+
+  // TypeScript
+  "js/ts.experimental.useTsgo": true,
   "typescript.native-preview.tsdk": "${workspaceFolder}/node_modules/@typescript/native-preview"
 }
