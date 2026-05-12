@@ -1,4 +1,10 @@
 {
+  // Files
+  "files.associations": {
+    "*.mdx": "markdown",
+    "LICENSE": "plaintext"
+  },
+
   // Formatting
   "[astro]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -23,5 +29,18 @@
 
   // TypeScript
   "js/ts.experimental.useTsgo": true,
-  "typescript.native-preview.tsdk": "${workspaceFolder}/node_modules/@typescript/native-preview"
+  "typescript.native-preview.tsdk": "${workspaceFolder}/node_modules/@typescript/native-preview",
+
+  // Spell check
+  "cSpell.words": [
+    "biomejs",
+    "crozet",
+    "esbenp",
+    "josephcrozet",
+    "knip",
+    "lastquestion",
+    "multivac",
+    "quattro",
+    "tsgo"
+  ]
 }
