@@ -1,4 +1,14 @@
 {
-  "recommendations": ["astro-build.astro-vscode"],
+  "recommendations": [
+    "astro-build.astro-vscode",
+    "bradlc.vscode-tailwindcss",
+    "biomejs.biome",
+    "esbenp.prettier-vscode",
+    "dbaeumer.vscode-eslint",
+    "typescriptteam.native-preview",
+    "github.vscode-github-actions",
+    "redhat.vscode-yaml",
+    "streetsidesoftware.code-spell-checker"
+  ],
   "unwantedRecommendations": []
 }
