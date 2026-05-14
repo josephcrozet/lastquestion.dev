@@ -2,6 +2,7 @@
   "recommendations": [
     "astro-build.astro-vscode",
     "bradlc.vscode-tailwindcss",
+    "oven.bun-vscode",
     "biomejs.biome",
     "esbenp.prettier-vscode",
     "dbaeumer.vscode-eslint",
