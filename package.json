@@ -32,22 +32,22 @@
     ]
   },
   "dependencies": {
-    "@astrojs/mdx": "^6.0.1",
+    "@astrojs/mdx": "^6.0.2",
     "@astrojs/rss": "^4.0.18",
     "@astrojs/sitemap": "^3.7.3",
     "@tailwindcss/typography": "^0.5.19",
     "@tailwindcss/vite": "^4.3.0",
-    "astro": "^6.4.2",
+    "astro": "^6.4.4",
     "tailwindcss": "^4.3.0"
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.9",
     "@biomejs/biome": "^2.4.16",
-    "@typescript-eslint/parser": "^8.60.0",
+    "@typescript-eslint/parser": "^8.60.1",
     "@typescript/native-preview": "beta",
     "eslint": "^10.4.1",
     "eslint-plugin-astro": "^1.7.0",
-    "knip": "^6.14.2",
+    "knip": "^6.16.0",
     "only-allow": "^1.2.2",
     "prettier": "^3.8.3",
     "prettier-plugin-astro": "^0.14.1",
