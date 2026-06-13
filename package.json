@@ -42,7 +42,7 @@
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.9",
-    "@biomejs/biome": "^2.4.16",
+    "@biomejs/biome": "^2.5.0",
     "@typescript-eslint/parser": "^8.60.1",
     "@typescript/native-preview": "beta",
     "eslint": "^10.4.1",
