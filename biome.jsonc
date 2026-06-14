@@ -60,6 +60,11 @@
       "tailwindDirectives": true
     }
   },
+  "html": {
+    "formatter": {
+      "enabled": true // experimental
+    }
+  },
   "overrides": [
     {
       "includes": ["**/*.astro"],
