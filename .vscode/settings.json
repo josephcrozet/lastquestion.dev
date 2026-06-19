@@ -29,7 +29,6 @@
 
   // TypeScript
   "js/ts.experimental.useTsgo": true,
-  "typescript.native-preview.tsdk": "${workspaceFolder}/node_modules/@typescript/native-preview",
 
   // Spell check
   "cSpell.words": [
