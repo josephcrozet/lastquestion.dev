@@ -27,8 +27,14 @@ const { page } = Astro.props;
 		}
 	</ul>
 
-	<nav>
-		{page.url.prev && <a href={page.url.prev}>← prev</a>}
+	<nav aria-label="Pagination">
+		{
+			page.url.prev && (
+				<a href={page.url.prev} aria-label="Newer posts">
+					← Newer posts
+				</a>
+			)
+		}
 		{
 			page.total > page.size && (
 				<span>
@@ -36,6 +42,12 @@ const { page } = Astro.props;
 				</span>
 			)
 		}
-		{page.url.next && <a href={page.url.next}>next →</a>}
+		{
+			page.url.next && (
+				<a href={page.url.next} aria-label="Older posts">
+					Older posts →
+				</a>
+			)
+		}
 	</nav>
 </BaseLayout>
