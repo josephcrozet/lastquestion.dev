@@ -1,5 +1,12 @@
-<nav>
-	<a href="/">Home</a>
-	<a href="/tags">Tags</a>
-	<a href="/about">About</a>
+---
+const pathname = Astro.url.pathname;
+
+const ariaCurrent = (href: string) =>
+	pathname === href || pathname.startsWith(`${href}/`) ? 'page' : undefined;
+---
+
+<nav aria-label="Main">
+	<a href="/" aria-current={ariaCurrent('/')}>Home</a>
+	<a href="/tags" aria-current={ariaCurrent('/tags')}>Tags</a>
+	<a href="/about" aria-current={ariaCurrent('/about')}>About</a>
 </nav>
