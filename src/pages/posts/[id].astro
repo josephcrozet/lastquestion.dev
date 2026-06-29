@@ -23,6 +23,17 @@ const { Content } = await render(post);
 
 <BaseLayout title={post.data.title} description={post.data.description} type="article">
 	<article class="prose">
+		<p>
+			<time datetime={post.data.pubDate.toISOString()}>
+				{
+					post.data.pubDate.toLocaleDateString('en-GB', {
+						year: 'numeric',
+						month: 'short',
+						day: 'numeric',
+					})
+				}
+			</time>
+		</p>
 		<Content />
 	</article>
 	<ul aria-label="Tags">
