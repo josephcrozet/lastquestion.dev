@@ -8,6 +8,7 @@ export default {
 			files: '*.astro',
 			options: {
 				parser: 'astro',
+				bracketSameLine: true,
 				singleQuote: true,
 				useTabs: true,
 			},
