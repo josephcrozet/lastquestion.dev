@@ -10,6 +10,7 @@ interface Props {
 
 const { title, description, type = 'website' } = Astro.props;
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const sourceUrl = 'https://github.com/josephcrozet/lastquestion.dev';
 ---
 
 <html lang="en">
@@ -39,7 +40,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 		<footer class="font-heading">
 			<p>
 				© Joseph Crozet ·
-				<a href="https://github.com/josephcrozet/lastquestion.dev">Source</a>
+				<a href={sourceUrl} aria-label="View source code on GitHub">Source</a>
 			</p>
 		</footer>
 	</body>
