@@ -62,7 +62,8 @@
   },
   "html": {
     "formatter": {
-      "enabled": true // experimental
+      "enabled": true, // experimental
+      "bracketSameLine": true
     }
   },
   "overrides": [
