@@ -7,6 +7,7 @@ const activeClass = 'aria-[current=page]:font-bold';
 
 <nav aria-label="Main">
 	<a href="/" aria-current={ariaCurrent('/')} class={activeClass}>Home</a>
+	<a href="/posts" aria-current={ariaCurrent('/posts')} class={activeClass}>Posts</a>
 	<a href="/tags" aria-current={ariaCurrent('/tags')} class={activeClass}>Tags</a>
 	<a href="/about" aria-current={ariaCurrent('/about')} class={activeClass}>About</a>
 </nav>
