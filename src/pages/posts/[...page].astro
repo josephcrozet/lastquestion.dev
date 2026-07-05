@@ -14,7 +14,7 @@ export const getStaticPaths = (async ({ paginate }) => {
 const { page } = Astro.props;
 ---
 
-<BaseLayout title="Last Question" description="Home Page">
+<BaseLayout title="Posts" description="Post List">
 	<ul>
 		{
 			page.data.map((post) => (
