@@ -31,7 +31,6 @@
       "typescript-7/bin/tsc"
     ],
     "ignoreDependencies": [
-      "@typescript-eslint/parser",
       "typescript-7"
     ]
   },
