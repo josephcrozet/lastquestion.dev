@@ -1,6 +1,7 @@
 ---
 import '@/styles/global.css';
 import Nav from '@/components/Nav.astro';
+import { SITE_TITLE } from '@/consts';
 
 interface Props {
 	title: string;
@@ -25,7 +26,7 @@ const sourceUrl = 'https://github.com/josephcrozet/lastquestion.dev';
 		{description && <meta property="og:description" content={description} />}
 		<meta property="og:type" content={type} />
 		<meta property="og:url" content={canonicalUrl} />
-		<meta property="og:site_name" content="Last Question" />
+		<meta property="og:site_name" content={SITE_TITLE} />
 		<meta name="twitter:card" content="summary" />
 		<meta name="generator" content={Astro.generator} />
 	</head>

@@ -1,10 +1,9 @@
 ---
+import { SITE_DESCRIPTION, SITE_TITLE } from '@/consts';
 import BaseLayout from '@/layouts/BaseLayout.astro';
 ---
 
-<BaseLayout title="Last Question" description="Home Page">
-	<p>
-		Personal blog about AI systems, tooling, and the space between vibe coding and AI engineering.
-	</p>
+<BaseLayout title={SITE_TITLE} description="Home Page">
+	<p>{SITE_DESCRIPTION}</p>
 	<p><a href="/posts">Read posts →</a></p>
 </BaseLayout>
