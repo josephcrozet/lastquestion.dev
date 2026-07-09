@@ -29,7 +29,7 @@
 
   // TypeScript
   "js/ts.experimental.useTsgo": true,
-  "js/ts.tsdk.path": "./node_modules/typescript-7",
+  "js/ts.tsdk.path": "./node_modules/@typescript/native",
 
   // Spell check
   "cSpell.words": [
