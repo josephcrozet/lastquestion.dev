@@ -27,9 +27,6 @@
     "pre-push": "bun run ci"
   },
   "knip": {
-    "ignoreBinaries": [
-      "@typescript/native/bin/tsc"
-    ],
     "ignoreDependencies": [
       "@typescript/native"
     ]
