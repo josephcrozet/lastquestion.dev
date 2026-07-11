@@ -1,8 +1,8 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
 
-@theme {
-	--font-body: "iA Writer Quattro", sans-serif;
-	--font-heading: "Space Grotesk", sans-serif;
-	--font-mono: "Fira Code", monospace;
+@theme inline {
+	--font-body: var(--font-ia-writer-quattro);
+	--font-heading: var(--font-space-grotesk);
+	--font-mono: var(--font-fira-code);
 }
