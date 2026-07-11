@@ -1,5 +1,6 @@
 ---
 import '@/styles/global.css';
+import { Font } from 'astro:assets';
 import Nav from '@/components/Nav.astro';
 import { SITE_TITLE } from '@/consts';
 
@@ -19,6 +20,9 @@ const sourceUrl = 'https://github.com/josephcrozet/lastquestion.dev';
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<Font cssVariable="--font-ia-writer-quattro" preload />
+		<Font cssVariable="--font-space-grotesk" preload />
+		<Font cssVariable="--font-fira-code" />
 		<title>{title}</title>
 		{description && <meta name="description" content={description} />}
 		<link rel="canonical" href={canonicalUrl} />
