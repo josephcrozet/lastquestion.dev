@@ -2,7 +2,8 @@
 @plugin "@tailwindcss/typography";
 
 @theme inline {
-	--font-body: var(--font-ia-writer-quattro);
 	--font-heading: var(--font-space-grotesk);
+	--font-body: var(--font-ia-writer-quattro);
+	--font-sans: var(--font-ia-writer-quattro);
 	--font-mono: var(--font-fira-code);
 }
