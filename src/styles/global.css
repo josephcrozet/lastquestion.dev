@@ -7,3 +7,10 @@
 	--font-sans: var(--font-ia-writer-quattro);
 	--font-mono: var(--font-fira-code);
 }
+
+.prose h1,
+.prose h2,
+.prose h3,
+.prose h4 {
+	@apply font-heading;
+}
