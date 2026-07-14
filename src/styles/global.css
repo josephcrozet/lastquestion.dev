@@ -8,6 +8,10 @@
 	--font-mono: var(--font-fira-code);
 }
 
+html {
+	scrollbar-gutter: stable;
+}
+
 .prose h1,
 .prose h2,
 .prose h3,
