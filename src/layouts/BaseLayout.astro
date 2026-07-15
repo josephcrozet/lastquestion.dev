@@ -18,20 +18,25 @@ const sourceUrl = 'https://github.com/josephcrozet/lastquestion.dev';
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
 		<Font cssVariable="--font-ia-writer-quattro" preload />
 		<Font cssVariable="--font-space-grotesk" preload />
 		<Font cssVariable="--font-fira-code" />
+
+		<link rel="canonical" href={canonicalUrl} />
 		<title>{title}</title>
 		{description && <meta name="description" content={description} />}
-		<link rel="canonical" href={canonicalUrl} />
-		<meta property="og:title" content={title} />
-		{description && <meta property="og:description" content={description} />}
+
 		<meta property="og:type" content={type} />
 		<meta property="og:url" content={canonicalUrl} />
+		<meta property="og:title" content={title} />
+		{description && <meta property="og:description" content={description} />}
 		<meta property="og:site_name" content={SITE_TITLE} />
 		<meta name="twitter:card" content="summary" />
+
 		<meta name="generator" content={Astro.generator} />
 	</head>
 	<body class="font-body">
