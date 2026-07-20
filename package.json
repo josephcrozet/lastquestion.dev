@@ -46,7 +46,7 @@
     "@typescript-eslint/parser": "^8.64.0",
     "@typescript/native": "npm:typescript@^7.0.2",
     "eslint": "^10.7.0",
-    "eslint-plugin-astro": "^2.1.1",
+    "eslint-plugin-astro": "^3.0.1",
     "knip": "^6.27.0",
     "only-allow": "^1.2.2",
     "prettier": "^3.9.5",
