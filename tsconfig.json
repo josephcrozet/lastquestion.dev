@@ -3,10 +3,9 @@
   "include": [".astro/types.d.ts", "**/*"],
   "exclude": ["dist"],
   "compilerOptions": {
-    "noPropertyAccessFromIndexSignature": true,
-    "erasableSyntaxOnly": true,
     "paths": {
       "@/*": ["./src/*"]
-    }
+    },
+    "erasableSyntaxOnly": true
   }
 }
