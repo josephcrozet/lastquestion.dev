@@ -5,4 +5,10 @@ export default defineConfig({
 	use: {
 		baseURL: 'http://localhost:4321',
 	},
+	webServer: {
+		command: 'bun run dev',
+		port: 4321,
+		reuseExistingServer: true,
+		timeout: 120_000,
+	},
 });
