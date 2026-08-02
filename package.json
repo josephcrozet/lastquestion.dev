@@ -20,6 +20,7 @@
     "check:astro": "astro check --noSync --silent --tsconfig tsconfig.astro.json",
     "check:ts": "./node_modules/@typescript/native/bin/tsc",
     "check:ci": "bun run --parallel check:ts check:astro",
+    "test": "vitest run && playwright test",
     "test:unit": "vitest run",
     "test:e2e": "playwright test",
     "ci": "bun run sync && bun run --parallel format lint knip check:ci build test:unit && bun run test:e2e",
