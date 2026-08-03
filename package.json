@@ -23,8 +23,9 @@
     "test": "vitest run && playwright test",
     "test:unit": "vitest run",
     "test:e2e": "playwright test",
-    "ci": "bun run sync && bun run --parallel format lint knip check:ci build test:unit && bun run test:e2e",
-    "fix": "bun run --sequential lint:fix format:fix"
+    "verify": "bun run --parallel format lint knip check:ci",
+    "fix": "bun run --sequential lint:fix format:fix",
+    "ci": "bun run sync && bun run --parallel format lint knip check:ci build test:unit && bun run test:e2e"
   },
   "simple-git-hooks": {
     "pre-push": "bun run ci"
