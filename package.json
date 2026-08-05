@@ -24,6 +24,7 @@
     "test": "vitest run && playwright test",
     "test:unit": "vitest run",
     "test:e2e": "playwright test",
+    "test:ci": "bun run --parallel test:unit test:e2e",
     "verify": "bun run --parallel format lint knip check:ci",
     "fix": "bun run --sequential lint:fix format:fix",
     "ci": "bun run sync && bun run --parallel format lint knip check:ci build test:unit && bun run test:e2e"
