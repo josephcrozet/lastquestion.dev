@@ -27,7 +27,7 @@
     "test:ci": "bun run --parallel test:unit test:e2e",
     "verify": "bun run --parallel format lint knip check:ci",
     "fix": "bun run --sequential lint:fix format:fix",
-    "ci": "bun run sync && bun run --parallel format lint knip check:ci build test:unit && bun run test:e2e"
+    "ci": "bun run sync && bun run --parallel format lint knip check:ci build && bun run test:ci"
   },
   "simple-git-hooks": {
     "pre-push": "bun run ci"
