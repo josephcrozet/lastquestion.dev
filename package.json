@@ -17,17 +17,17 @@
     "lint:fix": "biome check --write --formatter-enabled=false . && eslint --fix .",
     "knip": "knip",
     "sync": "astro sync --silent",
-    "check": "astro check --noSync --silent",
-    "check:astro": "astro check --noSync --silent --tsconfig tsconfig.astro.json",
+    "check": "astro check --silent",
+    "check:astro": "astro check --silent --tsconfig tsconfig.astro.json",
     "check:ts": "./node_modules/@typescript/native/bin/tsc",
-    "check:ci": "bun run --parallel check:ts check:astro",
+    "check:ci": "bun run check:astro && bun run check:ts",
     "test": "vitest run && playwright test",
     "test:unit": "vitest run",
     "test:e2e": "playwright test",
     "test:ci": "bun run --parallel test:unit test:e2e",
     "verify": "bun run --parallel format lint knip check:ci",
     "fix": "bun run --sequential lint:fix format:fix",
-    "ci": "bun run sync && bun run verify && bun run build:ci && bun run test:ci"
+    "ci": "bun run verify && bun run build:ci && bun run test:ci"
   },
   "simple-git-hooks": {
     "pre-push": "bun run ci"
