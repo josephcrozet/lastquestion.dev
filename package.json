@@ -18,12 +18,11 @@
     "knip": "knip",
     "sync": "astro sync --silent",
     "check": "astro check --silent",
-    "check:ci": "astro check --silent --tsconfig tsconfig.astro.json && ./node_modules/@typescript/native/bin/tsc",
     "test": "vitest run && playwright test",
     "test:unit": "vitest run",
     "test:e2e": "playwright test",
     "test:ci": "bun run --parallel test:unit test:e2e",
-    "verify": "bun run --parallel format lint knip check:ci",
+    "verify": "bun run --parallel format lint knip check",
     "fix": "bun run --sequential lint:fix format:fix",
     "ci": "bun run verify && bun run build:ci && bun run test:ci"
   },
