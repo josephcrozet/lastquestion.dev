@@ -16,7 +16,6 @@
     "lint": "biome lint --error-on-warnings . && eslint --max-warnings 0 .",
     "lint:fix": "biome check --write --formatter-enabled=false . && eslint --fix .",
     "knip": "knip",
-    "sync": "astro sync --silent",
     "check": "astro check --silent",
     "test": "vitest run && playwright test",
     "test:unit": "vitest run",
