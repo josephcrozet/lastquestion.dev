@@ -27,10 +27,6 @@
     "source.organizeImports": "never"
   },
 
-  // TypeScript
-  "js/ts.experimental.useTsgo": true,
-  "js/ts.tsdk.path": "./node_modules/@typescript/native",
-
   // Spell check
   "cSpell.words": [
     "biomejs",
