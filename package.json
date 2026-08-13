@@ -28,11 +28,6 @@
   "simple-git-hooks": {
     "pre-push": "bun run ci"
   },
-  "knip": {
-    "ignoreDependencies": [
-      "@typescript/native"
-    ]
-  },
   "dependencies": {
     "@astrojs/mdx": "^7.0.5",
     "@astrojs/rss": "^4.0.19",
@@ -48,7 +43,6 @@
     "@playwright/test": "^1.62.1",
     "@types/node": "^26.1.2",
     "@typescript-eslint/parser": "^8.66.0",
-    "@typescript/native": "npm:typescript@^7.0.2",
     "eslint": "^10.8.0",
     "eslint-plugin-astro": "^3.1.0",
     "knip": "^6.31.0",
