@@ -6,9 +6,9 @@ export default defineConfig({
 		baseURL: 'http://localhost:4321',
 	},
 	webServer: {
-		command: 'bun run dev',
+		command: process.env.CI ? 'bun run astro preview' : 'bun run astro dev',
 		port: 4321,
-		reuseExistingServer: true,
+		reuseExistingServer: !process.env.CI,
 		timeout: 120_000,
 	},
 });
