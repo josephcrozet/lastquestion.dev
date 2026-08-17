@@ -9,6 +9,6 @@ export default defineConfig({
 		command: process.env.CI ? 'bun run astro preview' : 'bun run astro dev',
 		port: 4321,
 		reuseExistingServer: !process.env.CI,
-		timeout: 120_000,
+		timeout: 60_000,
 	},
 });
