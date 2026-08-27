@@ -25,5 +25,7 @@ jobs:
           node-version: 26
       - name: Install
         run: bun install --frozen-lockfile
+      - name: Install Playwright browsers
+        run: bunx playwright install --with-deps chromium
       - name: CI
         run: bun run ci
