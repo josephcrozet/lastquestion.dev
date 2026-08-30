@@ -29,11 +29,13 @@ jobs:
         run: bunx playwright install --with-deps chromium
       - name: CI
         run: bun run ci
-      - name: Upload Playwright traces
+      - name: Upload Playwright results
         if: ${{ !cancelled() }}
         uses: actions/upload-artifact@v7
         with:
-          name: playwright-traces
-          path: test-results/
+          name: playwright-results
+          path: |
+            test-results/
+            playwright-report/
           if-no-files-found: ignore
           retention-days: 7
