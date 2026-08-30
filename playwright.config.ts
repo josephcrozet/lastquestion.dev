@@ -4,6 +4,7 @@ export default defineConfig({
 	testDir: './tests/e2e',
 	forbidOnly: !!process.env.CI,
 	retries: process.env.CI ? 2 : 0,
+	reporter: [['list'], ['html', { open: 'never' }]],
 	use: {
 		baseURL: 'http://localhost:4321',
 		trace: 'on-first-retry',
