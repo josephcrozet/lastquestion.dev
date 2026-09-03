@@ -3,6 +3,7 @@ dist/
 # Generated types
 .astro/
 # Vitest
+.vitest/
 coverage/
 # Playwright
 test-results/
