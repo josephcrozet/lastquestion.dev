@@ -29,8 +29,10 @@
 
   // Spell check
   "cSpell.words": [
+    "astrojs",
     "biomejs",
     "bradlc",
+    "bunx",
     "crozet",
     "dbaeumer",
     "esbenp",
@@ -40,6 +42,7 @@
     "knip",
     "lastquestion",
     "multivac",
-    "quattro"
+    "quattro",
+    "vitest"
   ]
 }
