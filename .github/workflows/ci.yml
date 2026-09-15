@@ -34,8 +34,6 @@ jobs:
         uses: actions/upload-artifact@v7
         with:
           name: playwright-results
-          path: |
-            test-results/
-            playwright-report/
+          path: playwright-report/
           if-no-files-found: ignore
           retention-days: 7
