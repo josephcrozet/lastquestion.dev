@@ -16,46 +16,38 @@ const { page } = Astro.props;
 
 <BaseLayout title="Posts" description="Post List">
 	<ul>
-		{
-			page.data.map((post) => (
-				<li>
-					<a href={`/posts/${post.id}/`}>{post.data.title}</a>
-					<p>
-						<time datetime={post.data.pubDate.toISOString()}>
-							{post.data.pubDate.toLocaleDateString('en-GB', {
-								year: 'numeric',
-								month: 'short',
-								day: 'numeric',
-							})}
-						</time>
-					</p>
-					<p>{post.data.description}</p>
-				</li>
-			))
-		}
+		{page.data.map((post) => (
+			<li>
+				<a href={`/posts/${post.id}/`}>{post.data.title}</a>
+				<p>
+					<time datetime={post.data.pubDate.toISOString()}>
+						{post.data.pubDate.toLocaleDateString('en-GB', {
+							year: 'numeric',
+							month: 'short',
+							day: 'numeric',
+						})}
+					</time>
+				</p>
+				<p>{post.data.description}</p>
+			</li>
+		))}
 	</ul>
 
 	<nav aria-label="Pagination">
-		{
-			page.url.prev && (
-				<a href={page.url.prev} aria-label="Newer posts">
-					← Newer posts
-				</a>
-			)
-		}
-		{
-			page.total > page.size && (
-				<span>
-					page {page.currentPage} of {page.lastPage}
-				</span>
-			)
-		}
-		{
-			page.url.next && (
-				<a href={page.url.next} aria-label="Older posts">
-					Older posts →
-				</a>
-			)
-		}
+		{page.url.prev && (
+			<a href={page.url.prev} aria-label="Newer posts">
+				← Newer posts
+			</a>
+		)}
+		{page.total > page.size && (
+			<span>
+				page {page.currentPage} of {page.lastPage}
+			</span>
+		)}
+		{page.url.next && (
+			<a href={page.url.next} aria-label="Older posts">
+				Older posts →
+			</a>
+		)}
 	</nav>
 </BaseLayout>
