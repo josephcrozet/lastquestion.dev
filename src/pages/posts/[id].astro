@@ -26,40 +26,32 @@ const { Content } = await render(post);
 		<p>{post.data.description}</p>
 		<p>
 			<time datetime={post.data.pubDate.toISOString()}>
-				{
-					post.data.pubDate.toLocaleDateString('en-GB', {
-						year: 'numeric',
-						month: 'short',
-						day: 'numeric',
-					})
-				}
+				{post.data.pubDate.toLocaleDateString('en-GB', {
+					year: 'numeric',
+					month: 'short',
+					day: 'numeric',
+				})}
 			</time>
 		</p>
 		<Content />
 	</article>
 	<ul aria-label="Tags">
-		{
-			post.data.tags.map((tag) => (
-				<li>
-					<a href={`/tags/${tag}`}>{tag}</a>
-				</li>
-			))
-		}
+		{post.data.tags.map((tag) => (
+			<li>
+				<a href={`/tags/${tag}`}>{tag}</a>
+			</li>
+		))}
 	</ul>
 	<nav aria-label="Post navigation">
-		{
-			prev && (
-				<a href={`/posts/${prev.id}`} aria-label={`Previous post: ${prev.data.title}`}>
-					← {prev.data.title}
-				</a>
-			)
-		}
-		{
-			next && (
-				<a href={`/posts/${next.id}`} aria-label={`Next post: ${next.data.title}`}>
-					{next.data.title} →
-				</a>
-			)
-		}
+		{prev && (
+			<a href={`/posts/${prev.id}`} aria-label={`Previous post: ${prev.data.title}`}>
+				← {prev.data.title}
+			</a>
+		)}
+		{next && (
+			<a href={`/posts/${next.id}`} aria-label={`Next post: ${next.data.title}`}>
+				{next.data.title} →
+			</a>
+		)}
 	</nav>
 </BaseLayout>
